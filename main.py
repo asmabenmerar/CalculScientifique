@@ -1,5 +1,6 @@
 import numpy
 import matplotlib.pyplot as plt
+from  config_file import *
 
 def f(x): # traite les array des nombres
     return x**2 - 8 * numpy.log(x)
@@ -20,7 +21,7 @@ def solve_equation(f, left,right, precision=10**(-3)) :
 def plot_function(f, start, end, step=0.01):
     x = numpy.arange(start, end, step)
     y = f(x)
-    plt.figure(figsize=(15, 6))
+    plt.figure(figsize=(LENGHT, HIGHT))
     plt.plot(x, y)
     plt.show()
     
